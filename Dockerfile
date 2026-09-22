@@ -56,7 +56,8 @@ RUN mkdir -p storage/framework/cache \
 
 RUN chown -R www-data:www-data \
     storage \
-    bootstrap/cache
+    bootstrap/cache \
+    database
 
 COPY docker/www.conf /usr/local/etc/php-fpm.d/www.conf
 COPY docker/nginx.conf /etc/nginx/sites-available/default
