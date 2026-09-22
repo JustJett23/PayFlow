@@ -58,6 +58,7 @@ RUN chown -R www-data:www-data \
     storage \
     bootstrap/cache
 
+COPY docker/www.conf /usr/local/etc/php-fpm.d/www.conf
 COPY docker/nginx.conf /etc/nginx/sites-available/default
 COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
