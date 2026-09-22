@@ -34,17 +34,17 @@ WORKDIR /var/www/html
 
 COPY composer.json composer.lock ./
 
+COPY package.json package-lock.json ./
+
+COPY . .
+
 RUN composer install \
     --no-dev \
     --no-interaction \
     --prefer-dist \
     --optimize-autoloader
 
-COPY package.json package-lock.json ./
-
 RUN npm install
-
-COPY . .
 
 RUN npm run build
 
