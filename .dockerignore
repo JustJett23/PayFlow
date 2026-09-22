@@ -12,8 +12,6 @@ storage/framework/cache/*
 storage/framework/sessions/*
 storage/framework/views/*
 
-database/*.sqlite
-database/*.sqlite-journal
 
 npm-debug.log
 yarn-debug.log
